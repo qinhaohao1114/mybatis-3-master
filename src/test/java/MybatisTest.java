@@ -26,6 +26,7 @@ public class MybatisTest {
     // 4.(1)根据statementid来从Configuration中map集合中获取到了指定的MappedStatement对象
        //(2)将查询任务委派了executor执行器
     List<Object> objects = sqlSession.selectList("namespace.id");
+    int update = sqlSession.update("11");
 
     // 5.释放资源
     sqlSession.close();
